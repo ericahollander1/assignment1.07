@@ -6,6 +6,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
 using namespace std;
 
 #include "dungeon.h"
@@ -183,7 +184,15 @@ int main(int argc, char *argv[])
                 cout << "\n";
             }
             else if (entry == "RRTY "){
-
+                string rarity;
+                for(int i = char_index; i < (int)myText.length(); i++){
+                    entry = myText.at(i);
+                    cout << entry;
+                }
+                stringstream degree(rarity);
+                degree >> d.monsterArray[monster_index].rarity;
+                cout << d.monsterArray[monster_index].rarity;
+                cout << "\n";
             }
             else if(entry == "COLOR "){
                 entry = "";
