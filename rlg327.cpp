@@ -78,7 +78,40 @@ void usage(char *name)
 
   exit(-1);
 }
+void set_die(dice_t dice, string roll){
+    string base;
+    string sides;
+    string die;
+    string input;
+    for(int i = 0; i < (int)roll.length(); i++){
+        if(roll.at(i) == '+'){
+            base = sides;
+            sides = "";
+        }
+        else if(roll.at(i) == 'd'){
+            die = sides;
+            sides = "";
+        }
+        else{
+            sides +=roll.at(i);
+        }
 
+
+        //cout << rarity;
+    }
+    stringstream degree(base);
+    degree >> dice.base;
+    cout << dice.base;
+    cout << "+";
+    stringstream degree1(die);
+    degree1 >> dice.num_dice;
+    cout << dice.num_dice;
+    cout << "d";
+    stringstream degree2(die);
+    degree2 >> dice.num_dice;
+    cout << dice.num_dice;
+    cout << "\n";
+}
 int main(int argc, char *argv[])
 {
   dungeon d;
@@ -187,12 +220,20 @@ int main(int argc, char *argv[])
                 string rarity = "";
                 for(int i = char_index; i < (int)myText.length(); i++){
                     rarity += myText.at(i);
-                    cout << rarity;
+                    //cout << rarity;
                 }
                 stringstream degree(rarity);
                 degree >> d.monsterArray[monster_index].rarity;
                 cout << d.monsterArray[monster_index].rarity;
                 cout << "\n";
+            }
+            else if(entry == "DAM "){
+                string damage = "";
+                for(int i = char_index; i < (int)myText.length(); i++){
+                    damage += myText.at(i);
+                    //cout << d.monsterArray[monster_index].character_name[i-char_index];
+                }
+                set_die(d.monsterArray[monster_index].damage, damage);
             }
             else if(entry == "COLOR "){
                 entry = "";
