@@ -151,7 +151,7 @@ int main(int argc, char *argv[])
             char entry_char;
             char_index = 0;
             int done = 0;
-            while(!done && char_index < myText.length()){
+            while(!done && char_index < (int)myText.length()){
                 entry_char = myText.at(char_index);
                 char_index++;
                 entry +=entry_char;
@@ -162,13 +162,13 @@ int main(int argc, char *argv[])
                 }
             }
 
-//            char_index++;
-//            if(entry == "NAME"){
-//                for(int i = 0; i < (int)myText.length(); i++){
-//                    d.monsterArray[monster_index].character_name[i] = myText.at(char_index + i);
-//                    cout << d.monsterArray[monster_index].character_name[i];
-//                }
-//            }
+ //           char_index++;
+            if(entry == "NAME "){
+                for(int i = 0; i < (int)myText.length(); i++){
+                    d.monsterArray[monster_index].character_name[i] = myText.at(char_index + i);
+                    cout << d.monsterArray[monster_index].character_name[i];
+                }
+            }
 //            else if(entry == "SYMB"){
 //                d.monsterArray[monster_index].mon_symbol =
 //            }
