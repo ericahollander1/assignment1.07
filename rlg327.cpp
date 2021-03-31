@@ -362,14 +362,38 @@ int main(int argc, char *argv[])
         cout << "\n";
         cout << d.monsterArray[i].rarity;
         cout << "\n";
-        cout << d.monsterArray[i].color[0];
-        cout << d.monsterArray[i].color[1];
-        cout << d.monsterArray[i].color[2];
-        cout << d.monsterArray[i].color[3];
-        cout << d.monsterArray[i].color[4];
-        cout << d.monsterArray[i].color[5];
-        cout << d.monsterArray[i].color[6];
-        cout << d.monsterArray[i].color[7];
+        if(d.monsterArray[i].color[0] == COLOR_RED){
+            cout << "RED ";
+        }
+        if(d.monsterArray[i].color[1] == COLOR_GREEN){
+            cout << "GREEN ";
+        }
+        if(d.monsterArray[i].color[2] == COLOR_BLUE){
+            cout << "BLUE ";
+        }
+        if(d.monsterArray[i].color[3] == COLOR_CYAN){
+            cout << "CYAN ";
+        }
+        if(d.monsterArray[i].color[4] == COLOR_YELLOW){
+            cout << "YELLOW ";
+        }
+        if(d.monsterArray[i].color[5] == COLOR_MAGENTA){
+            cout << "MAGENTA ";
+        }
+        if(d.monsterArray[i].color[6] == COLOR_WHITE){
+            cout << "WHITE ";
+        }
+        if(d.monsterArray[i].color[7] == COLOR_BLACK){
+            cout << "BLACK ";
+        }
+//        cout << d.monsterArray[i].color[0];
+//        cout << d.monsterArray[i].color[1];
+//        cout << d.monsterArray[i].color[2];
+//        cout << d.monsterArray[i].color[3];
+//        cout << d.monsterArray[i].color[4];
+//        cout << d.monsterArray[i].color[5];
+//        cout << d.monsterArray[i].color[6];
+//        cout << d.monsterArray[i].color[7];
         cout << "\n";
     }
 
