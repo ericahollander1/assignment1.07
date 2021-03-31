@@ -146,19 +146,26 @@ int main(int argc, char *argv[])
             }
         }
         else{
-            string entry;
+            cout << myText;
+//            string entry = "";
+//            char_index = 0;
+//            while(myText.at(char_index) != ' '){
+//                entry += myText.at(char_index);
+//                char_index++;
+//                cout << entry;
+//            }
+
+//            char_index++;
+//            if(entry == "NAME"){
+//                for(int i = 0; i < (int)myText.length(); i++){
+//                    d.monsterArray[monster_index].character_name[i] = myText.at(char_index + i);
+//                    cout << d.monsterArray[monster_index].character_name[i];
+//                }
+//            }
+//            else if(entry == "SYMB"){
+//                d.monsterArray[monster_index].mon_symbol =
+//            }
             char_index = 0;
-            while(myText.at(char_index) != ' '){
-                entry += myText.at(char_index);
-                char_index++;
-            }
-            char_index++;
-            if(entry == "NAME"){
-                for(int i = 0; i < (int)myText.length(); i++){
-                    d.monsterArray[monster_index].character_name[i] = myText.at(char_index + i);
-                    cout << d.monsterArray[monster_index].character_name[i];
-                }
-            }
         }
 
 
