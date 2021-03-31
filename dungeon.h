@@ -60,7 +60,7 @@ typedef struct dice{
 typedef struct monster {
     char character_name[25];
     char mon_symbol;
-    string description[10];
+    string description[11];
     dice_t speed;
     dice_t hit_points;
     dice_t damage;
