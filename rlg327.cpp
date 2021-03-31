@@ -124,14 +124,14 @@ int main(int argc, char *argv[])
         }
         // Output the text from the file
         if(myText == "BEGIN MONSTER") {
-            d.monsterArray[monster_index].color[0] = 0;
-            d.monsterArray[monster_index].color[1] = 0;
-            d.monsterArray[monster_index].color[2] = 0;
-            d.monsterArray[monster_index].color[3] = 0;
-            d.monsterArray[monster_index].color[4] = 0;
-            d.monsterArray[monster_index].color[5] = 0;
-            d.monsterArray[monster_index].color[6] = 0;
-            d.monsterArray[monster_index].color[7] = 0;
+            d.monsterArray[monster_index].color[0] = false;
+            d.monsterArray[monster_index].color[1] = false;
+            d.monsterArray[monster_index].color[2] = false;
+            d.monsterArray[monster_index].color[3] = false;
+            d.monsterArray[monster_index].color[4] = false;
+            d.monsterArray[monster_index].color[5] = false;
+            d.monsterArray[monster_index].color[6] = false;
+            d.monsterArray[monster_index].color[7] = false;
         }
         else if(myText == "END"){
             monster_index ++;
@@ -191,28 +191,28 @@ int main(int argc, char *argv[])
                     //cout << entry_char;
                     // cout << entry;
                     if(entry == "RED"){
-                        d.monsterArray[monster_index].color[0] = 1;
+                        d.monsterArray[monster_index].color[0] = true;
                     }
                     else if(entry == "GREEN"){
-                        d.monsterArray[monster_index].color[1] = 1;
+                        d.monsterArray[monster_index].color[1] = true;
                     }
                     else if(entry == "BLUE"){
-                        d.monsterArray[monster_index].color[2] = 1;
+                        d.monsterArray[monster_index].color[2] = true;
                     }
                     else if(entry == "CYAN"){
-                        d.monsterArray[monster_index].color[3] = 1;
+                        d.monsterArray[monster_index].color[3] = true;
                     }
                     else if(entry == "YELLOW"){
-                        d.monsterArray[monster_index].color[4] = 1;
+                        d.monsterArray[monster_index].color[4] = true;
                     }
                     else if(entry == "MAGENTA"){
-                        d.monsterArray[monster_index].color[5] = 1;
+                        d.monsterArray[monster_index].color[5] = true;
                     }
                     else if(entry == "WHITE"){
-                        d.monsterArray[monster_index].color[6] = 1;
+                        d.monsterArray[monster_index].color[6] = true;
                     }
                     else if(entry == "BLACK"){
-                        d.monsterArray[monster_index].color[7] = 1;
+                        d.monsterArray[monster_index].color[7] = true;
                     }
                     if(entry_char == ' '){
                         done = 1;
