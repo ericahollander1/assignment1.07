@@ -264,7 +264,7 @@ int main(int argc, char *argv[])
                 }
                 d.monsterArray[monster_index].damage = set_die(damage);
             }
-            else if(entry == "ABILITY "){
+            else if(entry == "ABIL "){
                 if(entry == "SMART"){
                     d.monsterArray[monster_index].ability[0] = 1;
                     //cout << "RED";
