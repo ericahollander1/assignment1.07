@@ -151,7 +151,7 @@ int main(int argc, char *argv[])
             char entry_char;
             char_index = 0;
             int done = 0;
-            while(!done){
+            while(!done && char_index < myText.length()){
                 entry_char = myText.at(char_index);
                 char_index++;
                 entry +=entry_char;
