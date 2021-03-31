@@ -265,44 +265,42 @@ int main(int argc, char *argv[])
                 d.monsterArray[monster_index].damage = set_die(damage);
             }
             else if(entry == "ABIL "){
-                if(entry == "SMART"){
-                    d.monsterArray[monster_index].ability[0] = 1;
-                    //cout << "RED";
-                }
-                else if(entry == "TELE"){
-                    d.monsterArray[monster_index].ability[1] = 1;
-                    //cout << "GREEN";
-                }
-                else if(entry == "TUNNEL"){
-                    d.monsterArray[monster_index].ability[2] = 1;
-                    //cout << "GREEN";
-                }
-                else if(entry == "ERRATIC"){
-                    d.monsterArray[monster_index].ability[3] = 1;
-                    //cout << "GREEN";
-                }
-                else if(entry == "PASS"){
-                    d.monsterArray[monster_index].ability[4] = 1;
-                    //cout << "GREEN";
-                }
-                else if(entry == "PICKUP"){
-                    d.monsterArray[monster_index].ability[5] = 1;
-                    //cout << "GREEN";
-                }
-                else if(entry == "DESTROY"){
-                    d.monsterArray[monster_index].ability[6] = 1;
-                    //cout << "GREEN";
-                }
-                else if(entry == "UNIQ"){
-                    d.monsterArray[monster_index].ability[7] = 1;
-                    //cout << "GREEN";
-                }
-                else if(entry == "BOSS"){
-                    d.monsterArray[monster_index].ability[8] = 1;
-                    //cout << "GREEN";
-                }
-                if(entry_char == ' '){
-                    entry = "";
+                entry = "";
+                while(char_index < (int)myText.length()) {
+                    entry_char = myText.at(char_index);
+                    char_index++;
+                    entry += entry_char;
+                    if (entry == "SMART") {
+                        d.monsterArray[monster_index].ability[0] = 1;
+                        //cout << "RED";
+                    } else if (entry == "TELE") {
+                        d.monsterArray[monster_index].ability[1] = 1;
+                        //cout << "GREEN";
+                    } else if (entry == "TUNNEL") {
+                        d.monsterArray[monster_index].ability[2] = 1;
+                        //cout << "GREEN";
+                    } else if (entry == "ERRATIC") {
+                        d.monsterArray[monster_index].ability[3] = 1;
+                        //cout << "GREEN";
+                    } else if (entry == "PASS") {
+                        d.monsterArray[monster_index].ability[4] = 1;
+                        //cout << "GREEN";
+                    } else if (entry == "PICKUP") {
+                        d.monsterArray[monster_index].ability[5] = 1;
+                        //cout << "GREEN";
+                    } else if (entry == "DESTROY") {
+                        d.monsterArray[monster_index].ability[6] = 1;
+                        //cout << "GREEN";
+                    } else if (entry == "UNIQ") {
+                        d.monsterArray[monster_index].ability[7] = 1;
+                        //cout << "GREEN";
+                    } else if (entry == "BOSS") {
+                        d.monsterArray[monster_index].ability[8] = 1;
+                        //cout << "GREEN";
+                    }
+                    if (entry_char == ' ') {
+                        entry = "";
+                    }
                 }
 
             }
