@@ -216,22 +216,22 @@ int main(int argc, char *argv[])
                 cout << d.monsterArray[monster_index].mon_symbol;
                 cout << "\n";
             }
-//            else if(entry == "HP "){
-//                string HP = "";
-//                for(int i = char_index; i < (int)myText.length(); i++){
-//                    HP += myText.at(i);
-//                    //cout << d.monsterArray[monster_index].character_name[i-char_index];
-//                }
-//                set_die(d.monsterArray[monster_index].hit_points, HP);
-//            }
-//            else if(entry == "SPEED "){
-//                string speed = "";
-//                for(int i = char_index; i < (int)myText.length(); i++){
-//                    speed += myText.at(i);
-//                    //cout << d.monsterArray[monster_index].character_name[i-char_index];
-//                }
-//                set_die(d.monsterArray[monster_index].speed, speed);
-//            }
+            else if(entry == "HP "){
+                string HP = "";
+                for(int i = char_index; i < (int)myText.length(); i++){
+                    HP += myText.at(i);
+                    //cout << d.monsterArray[monster_index].character_name[i-char_index];
+                }
+                set_die(d.monsterArray[monster_index].hit_points, HP);
+            }
+            else if(entry == "SPEED "){
+                string speed = "";
+                for(int i = char_index; i < (int)myText.length(); i++){
+                    speed += myText.at(i);
+                    //cout << d.monsterArray[monster_index].character_name[i-char_index];
+                }
+                set_die(d.monsterArray[monster_index].speed, speed);
+            }
             else if (entry == "RRTY "){
                 string rarity = "";
                 for(int i = char_index; i < (int)myText.length(); i++){
@@ -312,7 +312,12 @@ int main(int argc, char *argv[])
 
 
 
-    }
+
+   }
+//    for( int i = 0; i < count_mon; i++){
+//        for int
+//        d.monsterArray[i].character_name;
+//    }
 
   return 0;
   /* The project spec requires '--load' and '--save'.  It's common  *
