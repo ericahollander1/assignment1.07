@@ -382,8 +382,9 @@ int main(int argc, char *argv[])
             }
              cout << "\n";
         }
-        cout << "\n";
+
         cout << d.monsterArray[i].mon_symbol;
+        cout << "\n";
         if(d.monsterArray[i].color[0] == COLOR_RED){
             cout << "RED ";
         }
@@ -460,7 +461,7 @@ int main(int argc, char *argv[])
         cout << d.monsterArray[i].damage.num_sides;
         cout << "\n";
         cout << d.monsterArray[i].rarity;
-
+        cout << "\n";
 //        cout << d.monsterArray[i].color[0];
 //        cout << d.monsterArray[i].color[1];
 //        cout << d.monsterArray[i].color[2];
