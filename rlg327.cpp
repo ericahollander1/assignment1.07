@@ -7,6 +7,7 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <ncurses.h>
 using namespace std;
 
 #include "dungeon.h"
@@ -158,14 +159,14 @@ int main(int argc, char *argv[])
         }
         // Output the text from the file
         if(myText == "BEGIN MONSTER") {
-            d.monsterArray[monster_index].color[0] = false;
-            d.monsterArray[monster_index].color[1] = false;
-            d.monsterArray[monster_index].color[2] = false;
-            d.monsterArray[monster_index].color[3] = false;
-            d.monsterArray[monster_index].color[4] = false;
-            d.monsterArray[monster_index].color[5] = false;
-            d.monsterArray[monster_index].color[6] = false;
-            d.monsterArray[monster_index].color[7] = false;
+            d.monsterArray[monster_index].color[0] = 0;
+            d.monsterArray[monster_index].color[1] = 0;
+            d.monsterArray[monster_index].color[2] = 0;
+            d.monsterArray[monster_index].color[3] = 0;
+            d.monsterArray[monster_index].color[4] = 0;
+            d.monsterArray[monster_index].color[5] = 0;
+            d.monsterArray[monster_index].color[6] = 0;
+            d.monsterArray[monster_index].color[7] = 0;
         }
         else if(myText == "END"){
             monster_index ++;
@@ -265,35 +266,43 @@ int main(int argc, char *argv[])
                     //cout << entry_char;
                     // cout << entry;
                     if(entry == "RED"){
-                        d.monsterArray[monster_index].color[0] = true;
+                        d.monsterArray[monster_index].color[0] = COLOR_RED;
+                        entry = "";
                         //cout << "RED";
                     }
                     else if(entry == "GREEN"){
-                        d.monsterArray[monster_index].color[1] = true;
+                        d.monsterArray[monster_index].color[1] = COLOR_GREEN;
+                        entry = "";
                         //cout << "GREEN";
                     }
                     else if(entry == "BLUE"){
-                        d.monsterArray[monster_index].color[2] = true;
+                        d.monsterArray[monster_index].color[2] = COLOR_BLUE;
+                        entry = "";
                         //cout << "BLUE";
                     }
                     else if(entry == "CYAN"){
-                        d.monsterArray[monster_index].color[3] = true;
+                        d.monsterArray[monster_index].color[3] = COLOR_CYAN;
+                        entry = "";
                         //cout << "CYAN";
                     }
                     else if(entry == "YELLOW"){
-                        d.monsterArray[monster_index].color[4] = true;
+                        d.monsterArray[monster_index].color[4] = COLOR_YELLOW;
+                        entry = "";
                         //cout << "YELLOW";
                     }
                     else if(entry == "MAGENTA"){
-                        d.monsterArray[monster_index].color[5] = true;
+                        d.monsterArray[monster_index].color[5] = COLOR_MAGENTA;
+                        entry = "";
                         //cout << "MAGENTA";
                     }
                     else if(entry == "WHITE"){
-                        d.monsterArray[monster_index].color[6] = true;
+                        d.monsterArray[monster_index].color[6] = COLOR_WHITE;
+                        entry = "";
                         //cout << "WHITE";
                     }
                     else if(entry == "BLACK"){
-                        d.monsterArray[monster_index].color[7] = true;
+                        d.monsterArray[monster_index].color[7] = COLOR_BLACK;
+                        entry = "";
                         //cout << "BLACK";
                     }
                     if(entry_char == ' '){
@@ -354,6 +363,10 @@ int main(int argc, char *argv[])
         cout << "\n";
         cout << d.monsterArray[i].rarity;
         cout << "\n";
+        for(int n = 0; n< 8; n++){
+            cout << d.monsterArray[i].color[n];
+        }
+
     }
 
 
