@@ -384,27 +384,6 @@ int main(int argc, char *argv[])
         }
         cout << "\n";
         cout << d.monsterArray[i].mon_symbol;
-        cout << "\n";
-        cout << d.monsterArray[i].speed.base;
-        cout << "+";
-        cout << d.monsterArray[i].speed.num_dice;
-        cout << "d";
-        cout << d.monsterArray[i].speed.num_sides;
-        cout << "\n";
-        cout << d.monsterArray[i].hit_points.base;
-        cout << "+";
-        cout << d.monsterArray[i].hit_points.num_dice;
-        cout << "d";
-        cout << d.monsterArray[i].hit_points.num_sides;
-        cout << "\n";
-        cout << d.monsterArray[i].damage.base;
-        cout << "+";
-        cout << d.monsterArray[i].damage.num_dice;
-        cout << "d";
-        cout << d.monsterArray[i].damage.num_sides;
-        cout << "\n";
-        cout << d.monsterArray[i].rarity;
-        cout << "\n";
         if(d.monsterArray[i].color[0] == COLOR_RED){
             cout << "RED ";
         }
@@ -430,6 +409,15 @@ int main(int argc, char *argv[])
             cout << "BLACK ";
         }
         cout << "\n";
+
+        cout << d.monsterArray[i].speed.base;
+        cout << "+";
+        cout << d.monsterArray[i].speed.num_dice;
+        cout << "d";
+        cout << d.monsterArray[i].speed.num_sides;
+        cout << "\n";
+
+
         if(d.monsterArray[i].ability[0] == 1){
             cout << "SMART ";
         }
@@ -457,6 +445,22 @@ int main(int argc, char *argv[])
         if(d.monsterArray[i].ability[8] == 1){
             cout << "BOSS ";
         }
+        cout << "\n";
+        cout << d.monsterArray[i].hit_points.base;
+        cout << "+";
+        cout << d.monsterArray[i].hit_points.num_dice;
+        cout << "d";
+        cout << d.monsterArray[i].hit_points.num_sides;
+        cout << "\n";
+
+        cout << d.monsterArray[i].damage.base;
+        cout << "+";
+        cout << d.monsterArray[i].damage.num_dice;
+        cout << "d";
+        cout << d.monsterArray[i].damage.num_sides;
+        cout << "\n";
+        cout << d.monsterArray[i].rarity;
+
 //        cout << d.monsterArray[i].color[0];
 //        cout << d.monsterArray[i].color[1];
 //        cout << d.monsterArray[i].color[2];
