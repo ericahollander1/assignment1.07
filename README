@@ -1,0 +1,21 @@
+Collaborators/Group Members:
+Erica Hollander: Elh1 and Lakin Jenkins: ljenkins
+
+Title: HW 1.07
+
+Description:
+This program is the seventh step in creating a functional rogue like game. This 
+step was specifically used to implement a characteristic functionality for the 
+non player characters and objects. We were allowed to only do one of them given 
+the fact that they are both very similar processes so we only did the monster 
+file. This takes in a file that has the different characteristics of the monsters 
+set by headings and stores it into a struct that we created. There is also a 
+"dice" struct that stores the characteristics that need a roll to be stored and 
+displayed in the form <base>+<num_die>d<sides>. Then later after reading through 
+all of the file it displays the final output of each monsters characteristics to 
+the screen in the correct order and formatting. 
+ 
+ 
+Technologies used:
+ We used CLion to write in C++. For the final test we used emaca on Ubuntu to see it on 
+ the console. The two txt files were both done on Eclipse.
