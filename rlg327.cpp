@@ -182,6 +182,9 @@ int main(int argc, char *argv[])
                 cout << d.monsterArray[monster_index].mon_symbol;
                 cout << "\n";
             }
+            else if (entry == "RRTY "){
+
+            }
             else if(entry == "COLOR "){
                 entry = "";
                 while(!done && char_index < (int)myText.length()){
@@ -192,27 +195,35 @@ int main(int argc, char *argv[])
                     // cout << entry;
                     if(entry == "RED"){
                         d.monsterArray[monster_index].color[0] = true;
+                        cout << "RED";
                     }
                     else if(entry == "GREEN"){
                         d.monsterArray[monster_index].color[1] = true;
+                        cout << "GREEN";
                     }
                     else if(entry == "BLUE"){
                         d.monsterArray[monster_index].color[2] = true;
+                        cout << "BLUE";
                     }
                     else if(entry == "CYAN"){
                         d.monsterArray[monster_index].color[3] = true;
+                        cout << "CYAN";
                     }
                     else if(entry == "YELLOW"){
                         d.monsterArray[monster_index].color[4] = true;
+                        cout << "YELLOW";
                     }
                     else if(entry == "MAGENTA"){
                         d.monsterArray[monster_index].color[5] = true;
+                        cout << "MAGENTA";
                     }
                     else if(entry == "WHITE"){
                         d.monsterArray[monster_index].color[6] = true;
+                        cout << "WHITE";
                     }
                     else if(entry == "BLACK"){
                         d.monsterArray[monster_index].color[7] = true;
+                        cout << "BLACK";
                     }
                     if(entry_char == ' '){
                         done = 1;
