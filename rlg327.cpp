@@ -124,7 +124,14 @@ int main(int argc, char *argv[])
         }
         // Output the text from the file
         if(myText == "BEGIN MONSTER") {
-
+            d.monsterArray[monster_index].color[0] = 0;
+            d.monsterArray[monster_index].color[1] = 0;
+            d.monsterArray[monster_index].color[2] = 0;
+            d.monsterArray[monster_index].color[3] = 0;
+            d.monsterArray[monster_index].color[4] = 0;
+            d.monsterArray[monster_index].color[5] = 0;
+            d.monsterArray[monster_index].color[6] = 0;
+            d.monsterArray[monster_index].color[7] = 0;
         }
         else if(myText == "END"){
             monster_index ++;
@@ -167,8 +174,8 @@ int main(int argc, char *argv[])
                 for(int i = char_index; i < (int)myText.length(); i++){
                     d.monsterArray[monster_index].character_name[i-char_index] = myText.at(i);
                     cout << d.monsterArray[monster_index].character_name[i-char_index];
-                    cout << "\n";
                 }
+                cout << "\n";
             }
             else if(entry == "SYMB "){
                 d.monsterArray[monster_index].mon_symbol = myText.at(char_index);
