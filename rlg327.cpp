@@ -175,6 +175,7 @@ int main(int argc, char *argv[])
         else if(myText == "DESC"){
             int i = 0;
             desc = 1;
+            int index =0;
             while(desc && getline(MyReadFile, myText)){
                 if(myText == "."){
                     desc = 0;
@@ -184,12 +185,13 @@ int main(int argc, char *argv[])
                     for(i = 0; i < (int)myText.length(); i++){
                         //holder += myText.at(i);
 
-                        d.monsterArray[monster_index].description += myText.at(i);
+                        d.monsterArray[monster_index].description[index] += myText.at(i);
                        // cout << d.monsterArray[monster_index].description[char_index + i];
                         //char_index++;
                     }
                     char_index += i;
-                    cout << "\n";
+                    index++;
+                    //cout << "\n";
                 }
             }
         }
@@ -326,12 +328,12 @@ int main(int argc, char *argv[])
             cout << d.monsterArray[i].character_name[j];
         }
         cout << "\n";
-        for(int j = 0; j < (int)d.monsterArray[i].description.length(); j++){
-            cout << d.monsterArray[i].description.at(j);
-            if(j == 77){
-                cout << "\n";
-            }
 
+        for(int j = 0; j < 10; j++){
+            for(int k = 0; k < d.monsterArray[i].description[j].length(); k++){
+                cout << d.monsterArray[i].description[j].at(k);
+            }
+             cout << "\n";
         }
         cout << "\n";
 
