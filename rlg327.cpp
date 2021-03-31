@@ -191,9 +191,11 @@ int main(int argc, char *argv[])
                     }
                     char_index += i;
                     index++;
+
                     //cout << "\n";
                 }
             }
+            d.monsterArray[monster_index].count_strings = index;
         }
         else{
             //cout << myText;
@@ -329,7 +331,7 @@ int main(int argc, char *argv[])
         }
         cout << "\n";
 
-        for(int j = 0; j < 10; j++){
+        for(int j = 0; j < d.monsterArray[i].count_strings; j++){
             for(int k = 0; k < (int)d.monsterArray[i].description[j].length(); k++){
                 cout << d.monsterArray[i].description[j].at(k);
             }
