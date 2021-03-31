@@ -101,7 +101,7 @@ int main(int argc, char *argv[])
   d.max_monsters = MAX_MONSTERS;
 
   //code
-  ifstream MyReadFile("$HOME/monsters_desc.txt");
+  ifstream MyReadFile("monsters_desc.txt");
   string myText;
   int count_mon=0;
     while (getline (MyReadFile, myText)) {
@@ -117,33 +117,50 @@ int main(int argc, char *argv[])
     int monster_index = 0;
     int char_index;
     int desc = 0;
+    //int end = 0;
     while (getline (MyReadFile, myText)) {
         if(myText == " RLG327 MONSTER DESCRIPTION 1" && monster_index == 0){
             cout << "MADE TO TOP\n";
         }
         // Output the text from the file
-        if(myText == "BEGIN MONSTER"){
-            while(getline (MyReadFile, myText)){
-                if(myText == "DESC"){
-                    desc = 1;
-                    while(desc && getline(MyReadFile, myText)){
-                        if(myText == "."){
-                           desc = 0;
-                        }
-                        else{
-                            for(int i = 0; i < myText.length(); i++){
-                                d.monsterArray[monster_index].description[char_index + i] = myText.at(i);
-                                char_index++;
-                                cout << d.monsterArray[monster_index].description[char_index + i];
-                            }
-                        }
+        if(myText == "BEGIN MONSTER") {
+
+        }
+        else if(myText == "END"){
+            monster_index ++;
+        }
+        else if(myText == "DESC"){
+            desc = 1;
+            while(desc && getline(MyReadFile, myText)){
+                if(myText == "."){
+                    desc = 0;
+                }
+                else{
+                    for(int i = 0; i < (int)myText.length(); i++){
+                        d.monsterArray[monster_index].description[char_index + i] = myText.at(i);
+                        char_index++;
+                        cout << d.monsterArray[monster_index].description[char_index + i];
                     }
                 }
             }
-
-
-            monster_index ++;
         }
+        else{
+//            string entry;
+//            char_index = 0;
+//            while(myText.at(char_index) != ' '){
+//                entry += myText.at(char_index);
+//                char_index++;
+//            }
+//            char_index++;
+//            if(entry == "NAME"){
+//
+//            }
+        }
+
+
+
+
+
     }
 
   return 0;
