@@ -314,10 +314,39 @@ int main(int argc, char *argv[])
 
 
    }
-//    for( int i = 0; i < count_mon; i++){
-//        for int
-//        d.monsterArray[i].character_name;
-//    }
+    for( int i = 0; i < count_mon; i++){
+        for(int j = 0; j < 25; j++){
+            cout << d.monsterArray[i].character_name[j];
+        }
+        cout << "\n";
+        for(int j = 0; j < 77; j++){
+            cout << d.monsterArray[i].description[j];
+        }
+        cout << "\n";
+
+
+        cout << d.monsterArray[i].speed.base;
+        cout << "+";
+        cout << d.monsterArray[i].speed.num_dice;
+        cout << "d";
+        cout << d.monsterArray[i].speed.num_sides;
+        cout << "\n";
+        cout << d.monsterArray[i].hit_points.base;
+        cout << "+";
+        cout << d.monsterArray[i].hit_points.num_dice;
+        cout << "d";
+        cout << d.monsterArray[i].hit_points.num_sides;
+        cout << "\n";
+        cout << d.monsterArray[i].damage.base;
+        cout << "+";
+        cout << d.monsterArray[i].damage.num_dice;
+        cout << "d";
+        cout << d.monsterArray[i].damage.num_sides;
+        cout << "\n";
+        cout << d.monsterArray[i].rarity;
+        cout << "\n";
+    }
+
 
   return 0;
   /* The project spec requires '--load' and '--save'.  It's common  *
