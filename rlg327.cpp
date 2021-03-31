@@ -167,11 +167,59 @@ int main(int argc, char *argv[])
                 for(int i = char_index; i < (int)myText.length(); i++){
                     d.monsterArray[monster_index].character_name[i-char_index] = myText.at(i);
                     cout << d.monsterArray[monster_index].character_name[i-char_index];
+                    cout << "\n";
                 }
             }
             else if(entry == "SYMB "){
                 d.monsterArray[monster_index].mon_symbol = myText.at(char_index);
                 cout << d.monsterArray[monster_index].mon_symbol;
+                cout << "\n";
+            }
+            else if(entry == "COLOR "){
+                entry = "";
+                while(!done && char_index < (int)myText.length()){
+                    entry_char = myText.at(char_index);
+                    char_index++;
+                    entry +=entry_char;
+                    //cout << entry_char;
+                    // cout << entry;
+                    if(entry == "RED"){
+                        d.monsterArray[monster_index].color[0] = 1;
+                    }
+                    else if(entry == "GREEN"){
+                        d.monsterArray[monster_index].color[1] = 1;
+                    }
+                    else if(entry == "BLUE"){
+                        d.monsterArray[monster_index].color[2] = 1;
+                    }
+                    else if(entry == "CYAN"){
+                        d.monsterArray[monster_index].color[3] = 1;
+                    }
+                    else if(entry == "YELLOW"){
+                        d.monsterArray[monster_index].color[4] = 1;
+                    }
+                    else if(entry == "MAGENTA"){
+                        d.monsterArray[monster_index].color[5] = 1;
+                    }
+                    else if(entry == "WHITE"){
+                        d.monsterArray[monster_index].color[6] = 1;
+                    }
+                    else if(entry == "BLACK"){
+                        d.monsterArray[monster_index].color[7] = 1;
+                    }
+                    if(entry_char == ' '){
+                        done = 1;
+                    }
+                }
+                cout << d.monsterArray[monster_index].color[0];
+                cout << d.monsterArray[monster_index].color[1];
+                cout << d.monsterArray[monster_index].color[2];
+                cout << d.monsterArray[monster_index].color[3];
+                cout << d.monsterArray[monster_index].color[4];
+                cout << d.monsterArray[monster_index].color[5];
+                cout << d.monsterArray[monster_index].color[6];
+                cout << d.monsterArray[monster_index].color[7];
+                cout << "\n";
             }
             char_index = 0;
         }
