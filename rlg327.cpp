@@ -178,13 +178,16 @@ int main(int argc, char *argv[])
                     desc = 0;
                 }
                 else{
+                    //string holder = "";
                     for(i = 0; i < (int)myText.length(); i++){
-                        d.monsterArray[monster_index].description[char_index + i] = myText.at(i);
-                        //cout << d.monsterArray[monster_index].description[char_index + i];
+                        //holder += myText.at(i);
+
+                        d.monsterArray[monster_index].description += myText.at(i);
+                       // cout << d.monsterArray[monster_index].description[char_index + i];
                         //char_index++;
                     }
                     char_index += i;
-                    //cout << "\n";
+                    cout << "\n";
                 }
             }
         }
@@ -321,9 +324,9 @@ int main(int argc, char *argv[])
             cout << d.monsterArray[i].character_name[j];
         }
         cout << "\n";
-        for(int j = 0; j < 77; j++){
-            cout << d.monsterArray[i].description[j];
-            if(j == 25){
+        for(int j = 0; j < (int)d.monsterArray[i].description.length(); j++){
+            cout << d.monsterArray[i].description.at(i);
+            if(j == 77){
                 cout << "\n";
             }
 
