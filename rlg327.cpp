@@ -101,16 +101,16 @@ void set_die(dice_t dice, string roll){
     }
     stringstream degree(base);
     degree >> dice.base;
-    cout << dice.base;
-    cout << "+";
+//    cout << dice.base;
+//    cout << "+";
     stringstream degree1(die);
     degree1 >> dice.num_dice;
-    cout << dice.num_dice;
-    cout << "d";
+//    cout << dice.num_dice;
+//    cout << "d";
     stringstream degree2(sides);
     degree2 >> dice.num_sides;
-    cout << dice.num_sides;
-    cout << "\n";
+//    cout << dice.num_sides;
+//    cout << "\n";
 }
 int main(int argc, char *argv[])
 {
@@ -179,10 +179,10 @@ int main(int argc, char *argv[])
                 else{
                     for(int i = 0; i < (int)myText.length(); i++){
                         d.monsterArray[monster_index].description[char_index + i] = myText.at(i);
-                        cout << d.monsterArray[monster_index].description[char_index + i];
+                        //cout << d.monsterArray[monster_index].description[char_index + i];
                         char_index++;
                     }
-                    cout << "\n";
+                    //cout << "\n";
                 }
             }
         }
@@ -207,14 +207,14 @@ int main(int argc, char *argv[])
             if(entry == "NAME "){
                 for(int i = char_index; i < (int)myText.length(); i++){
                     d.monsterArray[monster_index].character_name[i-char_index] = myText.at(i);
-                    cout << d.monsterArray[monster_index].character_name[i-char_index];
+                    //cout << d.monsterArray[monster_index].character_name[i-char_index];
                 }
-                cout << "\n";
+                //cout << "\n";
             }
             else if(entry == "SYMB "){
                 d.monsterArray[monster_index].mon_symbol = myText.at(char_index);
-                cout << d.monsterArray[monster_index].mon_symbol;
-                cout << "\n";
+                //cout << d.monsterArray[monster_index].mon_symbol;
+                //cout << "\n";
             }
             else if(entry == "HP "){
                 string HP = "";
@@ -240,8 +240,8 @@ int main(int argc, char *argv[])
                 }
                 stringstream degree(rarity);
                 degree >> d.monsterArray[monster_index].rarity;
-                cout << d.monsterArray[monster_index].rarity;
-                cout << "\n";
+                //cout << d.monsterArray[monster_index].rarity;
+                //cout << "\n";
             }
             else if(entry == "DAM "){
                 string damage = "";
@@ -261,49 +261,49 @@ int main(int argc, char *argv[])
                     // cout << entry;
                     if(entry == "RED"){
                         d.monsterArray[monster_index].color[0] = true;
-                        cout << "RED";
+                        //cout << "RED";
                     }
                     else if(entry == "GREEN"){
                         d.monsterArray[monster_index].color[1] = true;
-                        cout << "GREEN";
+                        //cout << "GREEN";
                     }
                     else if(entry == "BLUE"){
                         d.monsterArray[monster_index].color[2] = true;
-                        cout << "BLUE";
+                        //cout << "BLUE";
                     }
                     else if(entry == "CYAN"){
                         d.monsterArray[monster_index].color[3] = true;
-                        cout << "CYAN";
+                        //cout << "CYAN";
                     }
                     else if(entry == "YELLOW"){
                         d.monsterArray[monster_index].color[4] = true;
-                        cout << "YELLOW";
+                        //cout << "YELLOW";
                     }
                     else if(entry == "MAGENTA"){
                         d.monsterArray[monster_index].color[5] = true;
-                        cout << "MAGENTA";
+                        //cout << "MAGENTA";
                     }
                     else if(entry == "WHITE"){
                         d.monsterArray[monster_index].color[6] = true;
-                        cout << "WHITE";
+                        //cout << "WHITE";
                     }
                     else if(entry == "BLACK"){
                         d.monsterArray[monster_index].color[7] = true;
-                        cout << "BLACK";
+                        //cout << "BLACK";
                     }
                     if(entry_char == ' '){
                         done = 1;
                     }
                 }
-                cout << d.monsterArray[monster_index].color[0];
-                cout << d.monsterArray[monster_index].color[1];
-                cout << d.monsterArray[monster_index].color[2];
-                cout << d.monsterArray[monster_index].color[3];
-                cout << d.monsterArray[monster_index].color[4];
-                cout << d.monsterArray[monster_index].color[5];
-                cout << d.monsterArray[monster_index].color[6];
-                cout << d.monsterArray[monster_index].color[7];
-                cout << "\n";
+//                cout << d.monsterArray[monster_index].color[0];
+//                cout << d.monsterArray[monster_index].color[1];
+//                cout << d.monsterArray[monster_index].color[2];
+//                cout << d.monsterArray[monster_index].color[3];
+//                cout << d.monsterArray[monster_index].color[4];
+//                cout << d.monsterArray[monster_index].color[5];
+//                cout << d.monsterArray[monster_index].color[6];
+//                cout << d.monsterArray[monster_index].color[7];
+//                cout << "\n";
             }
             char_index = 0;
         }
