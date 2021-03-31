@@ -184,9 +184,9 @@ int main(int argc, char *argv[])
                 cout << "\n";
             }
             else if (entry == "RRTY "){
-                string rarity;
+                string rarity = "";
                 for(int i = char_index; i < (int)myText.length(); i++){
-                    rarity = myText.at(i);
+                    rarity += myText.at(i);
                     cout << rarity;
                 }
                 stringstream degree(rarity);
