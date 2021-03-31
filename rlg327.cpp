@@ -78,11 +78,12 @@ void usage(char *name)
 
   exit(-1);
 }
-void set_die(dice_t dice, string roll){
+dice_t set_die(string roll){
     string base;
     string sides;
     string die;
-    string input;
+    //string input;
+    dice_t new_die;
     for(int i = 0; i < (int)roll.length(); i++){
         if(roll.at(i) == '+'){
             base = sides;
@@ -100,17 +101,18 @@ void set_die(dice_t dice, string roll){
         //cout << rarity;
     }
     stringstream degree(base);
-    degree >> dice.base;
+    degree >> new_die.base;
 //    cout << dice.base;
 //    cout << "+";
     stringstream degree1(die);
-    degree1 >> dice.num_dice;
+    degree1 >> new_die.num_dice;
 //    cout << dice.num_dice;
 //    cout << "d";
     stringstream degree2(sides);
-    degree2 >> dice.num_sides;
+    degree2 >> new_die.num_sides;
 //    cout << dice.num_sides;
 //    cout << "\n";
+return new_die;
 }
 int main(int argc, char *argv[])
 {
@@ -227,7 +229,7 @@ int main(int argc, char *argv[])
                     HP += myText.at(i);
                     //cout << d.monsterArray[monster_index].character_name[i-char_index];
                 }
-                set_die(d.monsterArray[monster_index].hit_points, HP);
+                d.monsterArray[monster_index].hit_points = set_die(HP);
             }
             else if(entry == "SPEED "){
                 string speed = "";
@@ -235,7 +237,7 @@ int main(int argc, char *argv[])
                     speed += myText.at(i);
                     //cout << d.monsterArray[monster_index].character_name[i-char_index];
                 }
-                set_die(d.monsterArray[monster_index].speed, speed);
+                d.monsterArray[monster_index].speed = set_die(speed);
             }
             else if (entry == "RRTY "){
                 string rarity = "";
@@ -254,7 +256,7 @@ int main(int argc, char *argv[])
                     damage += myText.at(i);
                     //cout << d.monsterArray[monster_index].character_name[i-char_index];
                 }
-                set_die(d.monsterArray[monster_index].damage, damage);
+                d.monsterArray[monster_index].damage = set_die(damage);
             }
             else if(entry == "COLOR "){
                 entry = "";
