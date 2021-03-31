@@ -119,7 +119,7 @@ int main(int argc, char *argv[])
     int desc = 0;
     //int end = 0;
     while (getline (MyReadFile, myText)) {
-        if(myText == " RLG327 MONSTER DESCRIPTION 1" && monster_index == 0){
+        if(myText == "RLG327 MONSTER DESCRIPTION 1" && monster_index == 0){
             cout << "MADE TO TOP\n";
         }
         // Output the text from the file
