@@ -108,8 +108,8 @@ void set_die(dice_t dice, string roll){
     cout << dice.num_dice;
     cout << "d";
     stringstream degree2(die);
-    degree2 >> dice.num_dice;
-    cout << dice.num_dice;
+    degree2 >> dice.num_sides;
+    cout << dice.num_sides;
     cout << "\n";
 }
 int main(int argc, char *argv[])
