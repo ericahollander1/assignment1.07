@@ -7,6 +7,7 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <ncurses.h>
 using namespace std;
 
 #include "dungeon.h"
@@ -15,6 +16,7 @@ using namespace std;
 #include "move.h"
 #include "utils.h"
 #include "io.h"
+
 
 const char *victory =
   "\n                                       o\n"
@@ -264,46 +266,46 @@ int main(int argc, char *argv[])
             }
             else if(entry == "COLOR "){
                 entry = "";
-                while(!done && char_index < (int)myText.length()){
+                while(char_index < (int)myText.length()){
                     entry_char = myText.at(char_index);
                     char_index++;
                     entry +=entry_char;
                     //cout << entry_char;
                     // cout << entry;
                     if(entry == "RED"){
-                        d.monsterArray[monster_index].color[0] = true;
+                        d.monsterArray[monster_index].color[0] = COLOR_RED;
                         //cout << "RED";
                     }
                     else if(entry == "GREEN"){
-                        d.monsterArray[monster_index].color[1] = true;
+                        d.monsterArray[monster_index].color[1] = COLOR_GREEN;
                         //cout << "GREEN";
                     }
                     else if(entry == "BLUE"){
-                        d.monsterArray[monster_index].color[2] = true;
+                        d.monsterArray[monster_index].color[2] = COLOR_BLUE;
                         //cout << "BLUE";
                     }
                     else if(entry == "CYAN"){
-                        d.monsterArray[monster_index].color[3] = true;
+                        d.monsterArray[monster_index].color[3] = COLOR_CYAN;
                         //cout << "CYAN";
                     }
                     else if(entry == "YELLOW"){
-                        d.monsterArray[monster_index].color[4] = true;
+                        d.monsterArray[monster_index].color[4] = COLOR_YELLOW;
                         //cout << "YELLOW";
                     }
                     else if(entry == "MAGENTA"){
-                        d.monsterArray[monster_index].color[5] = true;
+                        d.monsterArray[monster_index].color[5] = COLOR_MAGENTA;
                         //cout << "MAGENTA";
                     }
                     else if(entry == "WHITE"){
-                        d.monsterArray[monster_index].color[6] = true;
+                        d.monsterArray[monster_index].color[6] = COLOR_WHITE;
                         //cout << "WHITE";
                     }
                     else if(entry == "BLACK"){
-                        d.monsterArray[monster_index].color[7] = true;
+                        d.monsterArray[monster_index].color[7] = COLOR_BLACK;
                         //cout << "BLACK";
                     }
                     if(entry_char == ' '){
-                        done = 1;
+                        entry = "";
                     }
                 }
 //                cout << d.monsterArray[monster_index].color[0];
@@ -338,8 +340,8 @@ int main(int argc, char *argv[])
              cout << "\n";
         }
         cout << "\n";
-
-
+        cout << d.monsterArray[i].mon_symbol;
+        cout << "\n";
         cout << d.monsterArray[i].speed.base;
         cout << "+";
         cout << d.monsterArray[i].speed.num_dice;

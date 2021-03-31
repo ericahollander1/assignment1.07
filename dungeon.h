@@ -65,7 +65,7 @@ typedef struct monster {
     dice_t speed;
     dice_t hit_points;
     dice_t damage;
-    bool color[8];
+    int color[8];
     int ability[9];
     int rarity;
 }monster_t;
