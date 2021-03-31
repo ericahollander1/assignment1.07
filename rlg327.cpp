@@ -186,8 +186,8 @@ int main(int argc, char *argv[])
             else if (entry == "RRTY "){
                 string rarity;
                 for(int i = char_index; i < (int)myText.length(); i++){
-                    entry = myText.at(i);
-                    cout << entry;
+                    rarity = myText.at(i);
+                    cout << rarity;
                 }
                 stringstream degree(rarity);
                 degree >> d.monsterArray[monster_index].rarity;
