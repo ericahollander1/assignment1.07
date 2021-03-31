@@ -164,9 +164,9 @@ int main(int argc, char *argv[])
 
  //           char_index++;
             if(entry == "NAME "){
-                for(int i = 0; i < (int)myText.length(); i++){
-                    d.monsterArray[monster_index].character_name[i] = myText.at(char_index + i);
-                    cout << d.monsterArray[monster_index].character_name[i];
+                for(int i = char_index; i < (int)myText.length(); i++){
+                    d.monsterArray[monster_index].character_name[i-char_index] = myText.at(char_index + i);
+                    cout << d.monsterArray[monster_index].character_name[i-char_index];
                 }
             }
 //            else if(entry == "SYMB"){
