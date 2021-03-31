@@ -266,6 +266,9 @@ int main(int argc, char *argv[])
             }
             else if(entry == "COLOR "){
                 entry = "";
+                for(int i = 0; i < 8; i++){
+                    d.monsterArray[monster_index].color[0] = -1;
+                }
                 while(char_index < (int)myText.length()){
                     entry_char = myText.at(char_index);
                     char_index++;
