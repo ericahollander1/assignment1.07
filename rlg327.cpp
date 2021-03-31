@@ -141,20 +141,24 @@ int main(int argc, char *argv[])
                         cout << d.monsterArray[monster_index].description[char_index + i];
                         char_index++;
                     }
+                    cout << "\n";
                 }
             }
         }
         else{
-//            string entry;
-//            char_index = 0;
-//            while(myText.at(char_index) != ' '){
-//                entry += myText.at(char_index);
-//                char_index++;
-//            }
-//            char_index++;
-//            if(entry == "NAME"){
-//
-//            }
+            string entry;
+            char_index = 0;
+            while(myText.at(char_index) != ' '){
+                entry += myText.at(char_index);
+                char_index++;
+            }
+            char_index++;
+            if(entry == "NAME"){
+                for(int i = 0; i < (int)myText.length(); i++){
+                    d.monsterArray[monster_index].character_name[i] = myText.at(char_index + i);
+                    cout << d.monsterArray[monster_index].character_name[i];
+                }
+            }
         }
 
 
