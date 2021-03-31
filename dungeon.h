@@ -4,6 +4,8 @@
 # include "heap.h"
 # include "dims.h"
 # include "character.h"
+#include <string>
+using namespace std;
 
 #define DUNGEON_X              80
 #define DUNGEON_Y              21
@@ -58,7 +60,7 @@ typedef struct dice{
 typedef struct monster {
     char character_name[25];
     char mon_symbol;
-    char description[77];
+    string description;
     dice_t speed;
     dice_t hit_points;
     dice_t damage;
