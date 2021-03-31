@@ -362,6 +362,15 @@ int main(int argc, char *argv[])
         cout << "\n";
         cout << d.monsterArray[i].rarity;
         cout << "\n";
+        cout << d.monsterArray[i].color[0];
+        cout << d.monsterArray[i].color[1];
+        cout << d.monsterArray[i].color[2];
+        cout << d.monsterArray[i].color[3];
+        cout << d.monsterArray[i].color[4];
+        cout << d.monsterArray[i].color[5];
+        cout << d.monsterArray[i].color[6];
+        cout << d.monsterArray[i].color[7];
+        cout << "\n";
     }
 
 
