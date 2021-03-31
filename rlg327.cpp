@@ -330,7 +330,7 @@ int main(int argc, char *argv[])
         cout << "\n";
 
         for(int j = 0; j < 10; j++){
-            for(int k = 0; k < d.monsterArray[i].description[j].length(); k++){
+            for(int k = 0; k < (int)d.monsterArray[i].description[j].length(); k++){
                 cout << d.monsterArray[i].description[j].at(k);
             }
              cout << "\n";
