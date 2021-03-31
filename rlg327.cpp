@@ -93,7 +93,7 @@ void set_die(dice_t dice, string roll){
             sides = "";
         }
         else{
-            sides +=roll.at(i);
+            sides += roll.at(i);
         }
 
 
@@ -107,7 +107,7 @@ void set_die(dice_t dice, string roll){
     degree1 >> dice.num_dice;
     cout << dice.num_dice;
     cout << "d";
-    stringstream degree2(die);
+    stringstream degree2(sides);
     degree2 >> dice.num_sides;
     cout << dice.num_sides;
     cout << "\n";
@@ -216,6 +216,22 @@ int main(int argc, char *argv[])
                 cout << d.monsterArray[monster_index].mon_symbol;
                 cout << "\n";
             }
+//            else if(entry == "HP "){
+//                string HP = "";
+//                for(int i = char_index; i < (int)myText.length(); i++){
+//                    HP += myText.at(i);
+//                    //cout << d.monsterArray[monster_index].character_name[i-char_index];
+//                }
+//                set_die(d.monsterArray[monster_index].hit_points, HP);
+//            }
+//            else if(entry == "SPEED "){
+//                string speed = "";
+//                for(int i = char_index; i < (int)myText.length(); i++){
+//                    speed += myText.at(i);
+//                    //cout << d.monsterArray[monster_index].character_name[i-char_index];
+//                }
+//                set_die(d.monsterArray[monster_index].speed, speed);
+//            }
             else if (entry == "RRTY "){
                 string rarity = "";
                 for(int i = char_index; i < (int)myText.length(); i++){
