@@ -325,7 +325,7 @@ int main(int argc, char *argv[])
         }
         cout << "\n";
         for(int j = 0; j < (int)d.monsterArray[i].description.length(); j++){
-            cout << d.monsterArray[i].description.at(i);
+            cout << d.monsterArray[i].description.at(j);
             if(j == 77){
                 cout << "\n";
             }
