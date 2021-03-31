@@ -158,7 +158,7 @@ int main(int argc, char *argv[])
     //int end = 0;
     while (getline (MyReadFile, myText)) {
         if(myText == "RLG327 MONSTER DESCRIPTION 1" && monster_index == 0){
-            cout << "MADE TO TOP\n";
+
         }
         // Output the text from the file
         if(myText == "BEGIN MONSTER") {
