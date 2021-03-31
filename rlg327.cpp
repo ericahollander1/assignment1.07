@@ -323,6 +323,9 @@ int main(int argc, char *argv[])
         cout << "\n";
         for(int j = 0; j < 77; j++){
             cout << d.monsterArray[i].description[j];
+            if(j == 25){
+                cout << "\n";
+            }
 
         }
         cout << "\n";
