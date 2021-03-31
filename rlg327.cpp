@@ -138,8 +138,8 @@ int main(int argc, char *argv[])
                 else{
                     for(int i = 0; i < (int)myText.length(); i++){
                         d.monsterArray[monster_index].description[char_index + i] = myText.at(i);
-                        char_index++;
                         cout << d.monsterArray[monster_index].description[char_index + i];
+                        char_index++;
                     }
                 }
             }
