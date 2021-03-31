@@ -264,6 +264,48 @@ int main(int argc, char *argv[])
                 }
                 d.monsterArray[monster_index].damage = set_die(damage);
             }
+            else if(entry == "ABILITY "){
+                if(entry == "SMART"){
+                    d.monsterArray[monster_index].ability[0] = 1;
+                    //cout << "RED";
+                }
+                else if(entry == "TELE"){
+                    d.monsterArray[monster_index].ability[1] = 1;
+                    //cout << "GREEN";
+                }
+                else if(entry == "TUNNEL"){
+                    d.monsterArray[monster_index].ability[2] = 1;
+                    //cout << "GREEN";
+                }
+                else if(entry == "ERRATIC"){
+                    d.monsterArray[monster_index].ability[3] = 1;
+                    //cout << "GREEN";
+                }
+                else if(entry == "PASS"){
+                    d.monsterArray[monster_index].ability[4] = 1;
+                    //cout << "GREEN";
+                }
+                else if(entry == "PICKUP"){
+                    d.monsterArray[monster_index].ability[5] = 1;
+                    //cout << "GREEN";
+                }
+                else if(entry == "DESTROY"){
+                    d.monsterArray[monster_index].ability[6] = 1;
+                    //cout << "GREEN";
+                }
+                else if(entry == "UNIQ"){
+                    d.monsterArray[monster_index].ability[7] = 1;
+                    //cout << "GREEN";
+                }
+                else if(entry == "BOSS"){
+                    d.monsterArray[monster_index].ability[8] = 1;
+                    //cout << "GREEN";
+                }
+                if(entry_char == ' '){
+                    entry = "";
+                }
+
+            }
             else if(entry == "COLOR "){
                 entry = "";
                 for(int i = 0; i < 8; i++){
@@ -388,6 +430,34 @@ int main(int argc, char *argv[])
         }
         if(d.monsterArray[i].color[7] == COLOR_BLACK){
             cout << "BLACK ";
+        }
+        cout << "\n";
+        if(d.monsterArray[i].ability[0] == 1){
+            cout << "SMART ";
+        }
+        if(d.monsterArray[i].ability[1] == 1){
+            cout << "TELE ";
+        }
+        if(d.monsterArray[i].ability[2] == 1){
+            cout << "TUNNEL ";
+        }
+        if(d.monsterArray[i].ability[3] == 1){
+            cout << "ERRATIC ";
+        }
+        if(d.monsterArray[i].ability[4] == 1){
+            cout << "PASS ";
+        }
+        if(d.monsterArray[i].ability[5] == 1){
+            cout << "PICKUP ";
+        }
+        if(d.monsterArray[i].ability[6] == 1){
+            cout << "DESTROY ";
+        }
+        if(d.monsterArray[i].ability[7] == 1){
+            cout << "UNIQ ";
+        }
+        if(d.monsterArray[i].ability[8] == 1){
+            cout << "BOSS ";
         }
 //        cout << d.monsterArray[i].color[0];
 //        cout << d.monsterArray[i].color[1];
