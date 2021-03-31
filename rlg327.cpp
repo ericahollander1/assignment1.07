@@ -147,13 +147,20 @@ int main(int argc, char *argv[])
         }
         else{
             cout << myText;
-//            string entry = "";
-//            char_index = 0;
-//            while(myText.at(char_index) != ' '){
-//                entry += myText.at(char_index);
-//                char_index++;
-//                cout << entry;
-//            }
+            string entry = "";
+            char entry_char;
+            char_index = 0;
+            int done = 0;
+            while(!done){
+                entry_char = myText.at(char_index);
+                char_index++;
+                entry +=entry_char;
+                cout << entry_char;
+                cout << entry;
+                if(entry_char == ' '){
+                    done = 1;
+                }
+            }
 
 //            char_index++;
 //            if(entry == "NAME"){
